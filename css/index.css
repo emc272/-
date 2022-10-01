@@ -1,0 +1,238 @@
+a {
+  text-decoration: none;
+}
+html {
+  font-size: 50px;
+}
+@media screen and (min-width: 320px) {
+  html {
+    font-size: 21.33333333px;
+  }
+}
+@media screen and (min-width: 360px) {
+  html {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 375px) {
+  html {
+    font-size: 25px;
+  }
+}
+@media screen and (min-width: 384px) {
+  html {
+    font-size: 25.6px;
+  }
+}
+@media screen and (min-width: 400px) {
+  html {
+    font-size: 26.66666667px;
+  }
+}
+@media screen and (min-width: 414px) {
+  html {
+    font-size: 27.6px;
+  }
+}
+@media screen and (min-width: 424px) {
+  html {
+    font-size: 28.26666667px;
+  }
+}
+@media screen and (min-width: 480px) {
+  html {
+    font-size: 32px;
+  }
+}
+@media screen and (min-width: 540px) {
+  html {
+    font-size: 36px;
+  }
+}
+@media screen and (min-width: 720px) {
+  html {
+    font-size: 48px;
+  }
+}
+@media screen and (min-width: 750px) {
+  html {
+    font-size: 50px;
+  }
+}
+body {
+  min-width: 320px;
+  width: 15rem;
+  margin: 0 auto;
+  line-height: 1.5;
+  font-family: Arial, Helvetica;
+  background: #F2F2F2;
+}
+.search-content {
+  display: flex;
+  flex-wrap: wrap;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15rem;
+  height: 3.16rem;
+  background-color: #ffffff;
+}
+.search-content .icon-cebianlan {
+  width: 0.88rem;
+  height: 1.4rem;
+  margin: 0.22rem 0.5rem 0.14rem 0.48rem;
+  color: #28b549;
+  line-height: 1.4rem;
+  text-align: center;
+  font-size: 0.7rem;
+}
+.search-content .search {
+  width: 11.24rem;
+}
+.search-content .search input {
+  outline: none;
+  width: 100%;
+  border: 0;
+  height: 1.32rem;
+  border-radius: 0.46rem;
+  background-color: #eff4f0;
+  margin-top: 0.24rem;
+  font-size: 0.5rem;
+  color: #e6ebe7;
+  text-align: center;
+  padding-left: 1.1rem;
+}
+.search-content .icon-email {
+  width: 0.92rem;
+  height: 1.4rem;
+  margin: 0.22rem 0.5rem 0.14rem 0.48rem;
+  background-size: 0.88rem 1.4rem;
+  color: #28b549;
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+  text-align: center;
+}
+.search-content .dynamic {
+  box-sizing: border-box;
+  width: 1.4rem;
+  height: 1.3rem;
+  margin-left: 0.32rem;
+  margin-right: 1.2rem;
+  font-size: 0.63rem;
+  font-weight: 550;
+  line-height: 1.3rem;
+  color: #c0c0c0;
+}
+.search-content .recommend {
+  box-sizing: border-box;
+  width: 1.4rem;
+  height: 1.3rem;
+  margin-right: 1.2rem;
+  margin-left: 0.63rem;
+  font-size: 0.69rem;
+  font-weight: 550;
+  line-height: 1.3rem;
+  color: #c0c0c0;
+}
+.search-content img {
+  position: absolute;
+  top: 1.56rem;
+  right: 0;
+  display: block;
+  width: 5.5rem;
+  height: 1.6rem;
+}
+.search-content div.active {
+  color: #2a2a2a;
+  border-bottom: 0.1rem solid black;
+}
+.recommend-content {
+  margin-top: 3.3rem;
+  width: 15rem;
+}
+.recommend-content .total-info {
+  margin-bottom: 0.2rem;
+  background-color: #ffffff;
+}
+.recommend-content .total-info .user-info {
+  height: 1.4rem;
+  display: flex;
+  justify-content: space-between;
+}
+.recommend-content .total-info .user-info .user span {
+  font-size: 0.48rem;
+  font-weight: 550;
+  margin-left: 0.2rem;
+  color: #1d1d1d;
+}
+.recommend-content .total-info .user-info .user img {
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 0.4rem;
+  margin-top: 0.2rem;
+  margin-left: 0.1rem;
+  vertical-align: middle;
+}
+.recommend-content .total-info .user-info .icon-gengduo {
+  font-size: 0.9rem;
+  margin-right: 0.4rem;
+  text-align: center;
+  line-height: 1.4rem;
+}
+.recommend-content .total-info .msg-info {
+  margin-top: 0.66rem;
+  margin-left: 0.14rem;
+  color: #1b1b1b;
+  font-weight: 550;
+  font-size: 0.52rem;
+}
+.recommend-content .total-info .pic-info {
+  margin-top: 0.2rem;
+  border-radius: 0.3rem;
+  overflow: hidden;
+}
+.recommend-content .total-info .pic-info img {
+  margin-left: 0.03rem;
+  width: 31%;
+  height: 4.6333rem;
+}
+.recommend-content .total-info .other-info {
+  display: flex;
+}
+.recommend-content .total-info .other-info .iconfont {
+  flex: 1;
+  font-size: 0.56rem;
+  font-weight: 300;
+  line-height: 0.85rem;
+  text-align: center;
+}
+.footer-nav {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  width: 15rem;
+  height: 1.46rem;
+  background-color: #fff;
+}
+.footer-nav .modular {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: #7f7f7f;
+}
+.footer-nav .modular img {
+  margin-top: 0.07rem;
+  margin-left: 1.23rem;
+  margin-bottom: 0.12rem;
+  width: 0.56rem;
+  height: 0.56rem;
+  border-radius: 0.33rem;
+}
+.footer-nav .modular .iconfont {
+  font-size: 0.52rem;
+}
+.footer-nav .modular .word {
+  font-size: 0.27rem;
+}

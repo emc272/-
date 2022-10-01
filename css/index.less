@@ -1,0 +1,275 @@
+a {
+    text-decoration: none;
+}
+
+html {
+    font-size: 50px;
+}
+
+@media screen and (min-width: 320px) {
+    html {
+        font-size: 21.33333333px;
+    }
+}
+
+@media screen and (min-width: 360px) {
+    html {
+        font-size: 24px;
+    }
+}
+
+@media screen and (min-width: 375px) {
+    html {
+        font-size: 25px;
+    }
+}
+
+@media screen and (min-width: 384px) {
+    html {
+        font-size: 25.6px;
+    }
+}
+
+@media screen and (min-width: 400px) {
+    html {
+        font-size: 26.66666667px;
+    }
+}
+
+@media screen and (min-width: 414px) {
+    html {
+        font-size: 27.6px;
+    }
+}
+
+@media screen and (min-width: 424px) {
+    html {
+        font-size: 28.26666667px;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    html {
+        font-size: 32px;
+    }
+}
+
+@media screen and (min-width: 540px) {
+    html {
+        font-size: 36px;
+    }
+}
+
+@media screen and (min-width: 720px) {
+    html {
+        font-size: 48px;
+    }
+}
+
+@media screen and (min-width: 750px) {
+    html {
+        font-size: 50px;
+    }
+}
+
+body {
+    min-width: 320px;
+    width: 15rem;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-family: Arial, Helvetica;
+    background: #F2F2F2;
+}
+
+.search-content {
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15rem;
+    height: 3.16rem;
+    background-color: rgb(255, 255, 255);
+
+    .icon-cebianlan {
+        width: 0.88rem;
+        height: 1.4rem;
+        margin: 0.22rem 0.5rem 0.14rem 0.48rem;
+        color: rgb(40, 181, 73);
+        line-height: 1.4rem;
+        text-align: center;
+        font-size: 0.7rem;
+    }
+
+    .search {
+        width: 11.24rem;
+
+        input {
+            outline: none;
+            width: 100%;
+            border: 0;
+            height: 1.32rem;
+            border-radius: 0.46rem;
+            background-color: rgb(239, 244, 240);
+            margin-top: 0.24rem;
+            font-size: 0.5rem;
+            color: rgb(230, 235, 231);
+            text-align: center;
+            padding-left: 1.1rem;
+        }
+    }
+
+    .icon-email {
+        width: 0.92rem;
+        height: 1.4rem;
+        margin: 0.22rem 0.5rem 0.14rem 0.48rem;
+        background-size: 0.88rem 1.4rem;
+        color: rgb(40, 181, 73);
+        font-size: 0.9rem;
+        line-height: 1.4rem;
+        text-align: center;
+    }
+
+    .dynamic {
+        box-sizing: border-box;
+        width: 1.4rem;
+        height: 1.3rem;
+        margin-left: 0.32rem;
+        margin-right: 1.2rem;
+        font-size: 0.63rem;
+        font-weight: 550;
+        line-height: 1.3rem;
+        color: rgb(192, 192, 192);
+    }
+
+    .recommend {
+        box-sizing: border-box;
+        width: 1.4rem;
+        height: 1.3rem;
+        margin-right: 1.2rem;
+        margin-left: 0.63rem;
+        font-size: 0.69rem;
+        font-weight: 550;
+        line-height: 1.3rem;
+        color: rgb(192, 192, 192);
+    }
+
+    img {
+        position: absolute;
+        top: 1.56rem;
+        right: 0;
+        display: block;
+        width: 5.5rem;
+        height: 1.6rem;
+    }
+
+    div.active {
+        color: rgb(42, 42, 42);
+        border-bottom: .1rem solid black;
+    }
+}
+
+.recommend-content {
+    margin-top: 3.3rem;
+    width: 15rem;
+
+    .total-info {
+        margin-bottom: .2rem;
+        background-color: rgb(255, 255, 255);
+
+        .user-info {
+            height: 1.4rem;
+            display: flex;
+            justify-content: space-between;
+
+            .user {
+                span {
+                    font-size: 0.48rem;
+                    font-weight: 550;
+                    margin-left: .2rem;
+                    color: rgb(29, 29, 29);
+                }
+
+                img {
+                    width: 1.4rem;
+                    height: 1.4rem;
+                    border-radius: .4rem;
+                    margin-top: .2rem;
+                    margin-left: .1rem;
+                    vertical-align: middle
+                }
+            }
+
+            .icon-gengduo {
+                font-size: 0.9rem;
+                margin-right: 0.4rem;
+                text-align: center;
+                line-height: 1.4rem;
+            }
+        }
+
+        .msg-info {
+            margin-top: .66rem;
+            margin-left: .14rem;
+            color: rgb(27, 27, 27);
+            font-weight: 550;
+            font-size: 0.52rem;
+        }
+
+        .pic-info {
+            margin-top: .2rem;
+            border-radius: .3rem;
+            overflow: hidden;
+
+            img {
+                margin-left: .03rem;
+                width: 31%;
+                height: 4.6333rem;
+            }
+        }
+
+        .other-info {
+            display: flex;
+
+            .iconfont {
+                flex: 1;
+                font-size: .56rem;
+                font-weight: 300;
+                line-height: 0.85rem;
+                text-align: center;
+            }
+        }
+    }
+
+}
+
+.footer-nav{
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    width: 15rem;
+    height: 1.46rem;
+    background-color: #fff;
+    .modular{
+        flex:1;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        color: rgb(127, 127, 127);
+        img{
+            margin-top: .07rem;
+            margin-left: 1.23rem;
+            margin-bottom: .12rem;
+            width: .56rem;
+            height: .56rem;
+            border-radius: .33rem;
+        }
+        .iconfont{
+            font-size: .52rem;
+        }
+        .word{
+            font-size: .27rem;
+        }
+    }
+}

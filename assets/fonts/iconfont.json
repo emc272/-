@@ -1,0 +1,163 @@
+{
+  "id": "3639123",
+  "name": "webpack",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "145456",
+      "name": "信封",
+      "font_class": "xinfeng",
+      "unicode": "e640",
+      "unicode_decimal": 58944
+    },
+    {
+      "icon_id": "9512714",
+      "name": "twitter",
+      "font_class": "twitter",
+      "unicode": "e646",
+      "unicode_decimal": 58950
+    },
+    {
+      "icon_id": "11372658",
+      "name": "订单",
+      "font_class": "dingdan",
+      "unicode": "e8ae",
+      "unicode_decimal": 59566
+    },
+    {
+      "icon_id": "11372774",
+      "name": "首页",
+      "font_class": "shouye",
+      "unicode": "e8c6",
+      "unicode_decimal": 59590
+    },
+    {
+      "icon_id": "11859278",
+      "name": "市场",
+      "font_class": "shichang",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "12320602",
+      "name": "圆",
+      "font_class": "yuan",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "12437174",
+      "name": "影视",
+      "font_class": "yingshi",
+      "unicode": "e62a",
+      "unicode_decimal": 58922
+    },
+    {
+      "icon_id": "14851786",
+      "name": "电热水壶",
+      "font_class": "dianreshuihu",
+      "unicode": "e63c",
+      "unicode_decimal": 58940
+    },
+    {
+      "icon_id": "1306",
+      "name": "购物车空",
+      "font_class": "gouwuchekong",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "7418",
+      "name": "返回",
+      "font_class": "fanhui",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "77848",
+      "name": "返回2",
+      "font_class": "fanhui2",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "1546603",
+      "name": "小组",
+      "font_class": "xiaozu",
+      "unicode": "e69a",
+      "unicode_decimal": 59034
+    },
+    {
+      "icon_id": "3538385",
+      "name": "更多",
+      "font_class": "gengduo",
+      "unicode": "e719",
+      "unicode_decimal": 59161
+    },
+    {
+      "icon_id": "5387966",
+      "name": "钱包_o",
+      "font_class": "qianbao_o",
+      "unicode": "eba1",
+      "unicode_decimal": 60321
+    },
+    {
+      "icon_id": "629357",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e651",
+      "unicode_decimal": 58961
+    },
+    {
+      "icon_id": "3734350",
+      "name": "2侧边栏",
+      "font_class": "cebianlan",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "6337455",
+      "name": "点赞",
+      "font_class": "dianzan",
+      "unicode": "ec7f",
+      "unicode_decimal": 60543
+    },
+    {
+      "icon_id": "15838472",
+      "name": "email",
+      "font_class": "email",
+      "unicode": "e66f",
+      "unicode_decimal": 58991
+    },
+    {
+      "icon_id": "17546280",
+      "name": "评论",
+      "font_class": "pinglun",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "18171164",
+      "name": "转发,流转,旋转",
+      "font_class": "loop",
+      "unicode": "ea1d",
+      "unicode_decimal": 59933
+    },
+    {
+      "icon_id": "11372639",
+      "name": "爱心",
+      "font_class": "aixin",
+      "unicode": "e8ab",
+      "unicode_decimal": 59563
+    },
+    {
+      "icon_id": "11372640",
+      "name": "编辑",
+      "font_class": "bianji",
+      "unicode": "e8ac",
+      "unicode_decimal": 59564
+    }
+  ]
+}
