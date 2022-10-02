@@ -244,20 +244,22 @@ body {
 
 }
 
-.footer-nav{
+.footer-nav {
     position: fixed;
     bottom: 0;
     display: flex;
     width: 15rem;
     height: 1.46rem;
     background-color: #fff;
-    .modular{
-        flex:1;
+
+    .modular {
+        flex: 1;
         display: flex;
         flex-direction: column;
         text-align: center;
         color: rgb(127, 127, 127);
-        img{
+
+        img {
             margin-top: .07rem;
             margin-left: 1.23rem;
             margin-bottom: .12rem;
@@ -265,11 +267,164 @@ body {
             height: .56rem;
             border-radius: .33rem;
         }
-        .iconfont{
+
+        .iconfont {
             font-size: .52rem;
         }
-        .word{
+
+        .word {
             font-size: .27rem;
         }
+    }
+
+    div.active {
+        color: rgb(0, 187, 47)
+    }
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    // z-index: 1;
+    display: flex;
+    display: none;
+    width: 100%;
+    height: 100%;
+
+    // background-color: pink;
+    .content {
+        width: 68%;
+        height: 100%;
+        background-color: rgb(247, 247, 247);
+        position: relative;
+
+        header {
+            display: flex;
+            justify-content: space-between;
+
+            .icon-guanbi_o {
+                padding-left: 1.333rem;
+                line-height: .99rem;
+                font-size: .93rem;
+                font-weight: 700;
+                color: rgb(127, 127, 127);
+            }
+
+            .icon-saoyisaosaomiao {
+                padding-right: .4rem;
+                line-height: .99rem;
+                font-size: .73rem;
+                font-weight: 550;
+                color: rgb(127, 127, 127);
+            }
+        }
+
+        .sidebar-user-info {
+            height: 1.9rem;
+            margin-top: .9rem;
+            margin-left: 1.3rem;
+            margin-bottom: .73rem;
+
+            img {
+                float: left;
+                width: 1.8rem;
+                height: 1.8em;
+                border-radius: .9rem;
+            }
+
+            .total {
+                padding-left: .23rem;
+                float: left;
+                display: flex;
+                vertical-align: top;
+                flex-direction: column;
+
+                .user-name {
+                    font-weight: 550;
+                    font-size: .7rem;
+                }
+
+                .bean-number {
+                    width: 2.35rem;
+                    height: 1.74em;
+                    border-radius: .7rem;
+                    // vertical-align: bottom;
+                    background-color: rgb(234, 234, 234);
+                    color: rgb(27, 27, 27);
+                    font-size: .53rem;
+                    text-align: center;
+                    line-height: 0.87rem;
+                }
+            }
+        }
+
+        div[class^="colomn-content"] {
+            padding-left: 1.67rem;
+            margin-bottom: .25rem;
+
+            .iconfont {
+                color: rgb(127, 127, 127);
+                font-size: .8rem;
+                font-weight: 600;
+            }
+
+            .line-word {
+                padding-left: .3rem;
+                font-size: .6rem;
+            }
+        }
+
+        .details {
+            position: absolute;
+            bottom: 2.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-wrap: wrap;
+            width: 92%;
+            height: 4.96rem;
+            background-color: #fff;
+
+            div[class^="sidebar-footer-content"] {
+                width: 33.3%;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                color: rgb(127, 127, 127);
+
+                .iconfont {
+                    font-weight: 550;
+                    color: rgb(128, 128, 128);
+                    font-size: .84rem;
+                }
+
+                .word {
+                    font-size: .5rem;
+                }
+            }
+        }
+
+        footer{
+            img{
+                width: 0.99rem;
+                height: 0.99rem;
+                vertical-align: middle;
+            }
+            position: absolute;
+            bottom: 0;
+            color: rgb(200, 200, 200);
+            font-size: .6rem;
+            padding-left: 1.99rem;
+            padding-bottom: 0.99rem;
+        }
+
+    }
+
+    .background {
+        height: 100%;
+        width: 32%;
+        background-color: rgba(0, 0, 0, .4);
     }
 }

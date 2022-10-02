@@ -6,6 +6,69 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "122415",
+      "name": "帮助",
+      "font_class": "bangzhu",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "145433",
+      "name": "设置",
+      "font_class": "shezhi",
+      "unicode": "e62b",
+      "unicode_decimal": 58923
+    },
+    {
+      "icon_id": "425651",
+      "name": "社区",
+      "font_class": "shequ",
+      "unicode": "e62c",
+      "unicode_decimal": 58924
+    },
+    {
+      "icon_id": "538876",
+      "name": "收藏",
+      "font_class": "shoucang",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    },
+    {
+      "icon_id": "4954928",
+      "name": "关注",
+      "font_class": "guanzhu",
+      "unicode": "e655",
+      "unicode_decimal": 58965
+    },
+    {
+      "icon_id": "5387849",
+      "name": "安全_o",
+      "font_class": "anquan_o",
+      "unicode": "eb71",
+      "unicode_decimal": 60273
+    },
+    {
+      "icon_id": "5387862",
+      "name": "关闭_o",
+      "font_class": "guanbi_o",
+      "unicode": "eb76",
+      "unicode_decimal": 60278
+    },
+    {
+      "icon_id": "6129261",
+      "name": "222扫一扫、扫描",
+      "font_class": "saoyisaosaomiao",
+      "unicode": "e7c1",
+      "unicode_decimal": 59329
+    },
+    {
+      "icon_id": "11391545",
+      "name": "历史",
+      "font_class": "lishi",
+      "unicode": "e638",
+      "unicode_decimal": 58936
+    },
+    {
       "icon_id": "145456",
       "name": "信封",
       "font_class": "xinfeng",
