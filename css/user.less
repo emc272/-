@@ -1,0 +1,585 @@
+a {
+    text-decoration: none;
+}
+
+html {
+    font-size: 50px;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (min-width: 320px) {
+    html {
+        font-size: 21.33333333px;
+    }
+}
+
+@media screen and (min-width: 360px) {
+    html {
+        font-size: 24px;
+    }
+}
+
+@media screen and (min-width: 375px) {
+    html {
+        font-size: 25px;
+    }
+}
+
+@media screen and (min-width: 384px) {
+    html {
+        font-size: 25.6px;
+    }
+}
+
+@media screen and (min-width: 400px) {
+    html {
+        font-size: 26.66666667px;
+    }
+}
+
+@media screen and (min-width: 414px) {
+    html {
+        font-size: 27.6px;
+    }
+}
+
+@media screen and (min-width: 424px) {
+    html {
+        font-size: 28.26666667px;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    html {
+        font-size: 32px;
+    }
+}
+
+@media screen and (min-width: 540px) {
+    html {
+        font-size: 36px;
+    }
+}
+
+@media screen and (min-width: 720px) {
+    html {
+        font-size: 48px;
+    }
+}
+
+@media screen and (min-width: 750px) {
+    html {
+        font-size: 50px;
+    }
+}
+
+body {
+    min-width: 320px;
+    width: 15rem;
+    height: 90rem;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-family: Arial, Helvetica;
+    background: #F2F2F2;
+    text-align: center;
+}
+
+.vague_pic {
+    overflow: hidden;
+    z-index: -1;
+    position: absolute;
+    top: -1.8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15rem;
+    height: 15rem;
+    // border-left: 1.38rem solid rgb(94, 72, 59);
+    // border-right: 1.38rem solid rgb(94, 72, 59);
+    border-bottom: .18rem solid rgb(94, 72, 59);
+    background: url(../assets/uploads/36180475.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    -webkit-filter: blur(18px);
+    filter: blur(18px);
+}
+
+.dynamic-header {
+    display: flex;
+    display: none;
+    justify-content: space-between;
+    width: 15rem;
+    background-color: #fff;
+
+    .iconfont {
+        font-size: 1.5rem;
+        padding-left: .53rem;
+        font-weight: 550;
+    }
+
+    .dynamic-user-info {
+        padding-top: .27rem;
+        margin-left: -2.2rem;
+
+        img {
+            float: left;
+            width: 1.8rem;
+            height: 1.8em;
+            border-radius: .9rem;
+        }
+
+        .total {
+            padding-left: .23rem;
+            float: left;
+            display: flex;
+            vertical-align: top;
+            flex-direction: column;
+
+            .user-name {
+                font-weight: 550;
+                font-size: .7rem;
+            }
+
+            .bean-number {
+                color: rgb(27, 27, 27);
+                font-size: .53rem;
+                text-align: left;
+                line-height: 0.87rem;
+            }
+        }
+    }
+}
+
+.user-total-info {
+    // position: absolute;
+    // // top: -1.8rem;
+    // left: 50%;
+    // transform: translateX(-50%);
+    width: 15rem;
+    height: 14rem;
+
+    header {
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        color: white;
+        padding-left: .3rem;
+
+        .iconfont {
+            font-size: .9rem;
+        }
+    }
+
+    img {
+        display: block;
+        margin: .5rem auto .4rem;
+        width: 3.4rem;
+        height: 3.4rem;
+        border-radius: 1.7rem;
+        border: .08rem solid white;
+    }
+
+    .boiling_water {
+        margin: 0 auto;
+        height: 1.2rem;
+        width: 4.2rem;
+        background-color: rgb(95, 91, 88);
+        border-radius: .37rem;
+        border: .03rem solid black;
+
+        .icon-dianreshuihu {
+            float: left;
+            display: inline-block;
+            height: 100%;
+            width: 36%;
+            border-radius: .3rem;
+            background-color: rgb(38, 38, 38);
+            text-align: center;
+            line-height: 1.2rem;
+            color: red;
+            font-size: .8rem;
+        }
+
+        .water_number {
+            float: left;
+            display: inline-block;
+            height: 100%;
+            width: 64%;
+            text-align: center;
+            line-height: 1.2rem;
+            color: white;
+            font-size: .58rem;
+        }
+    }
+
+    .user-info {
+        margin-top: .8rem;
+
+        .header-info {
+            display: flex;
+            justify-content: space-between;
+
+            .user-name {
+                .name {
+                    padding-left: .17rem;
+                    color: rgb(251, 248, 246);
+                    font-size: .84rem;
+                    font-weight: 300;
+                    line-height: 1.8rem;
+                }
+
+                .information {
+                    padding-left: .27rem;
+                    color: rgb(251, 248, 246);
+                    font-size: .34rem;
+                    font-weight: 100;
+                    line-height: .1rem;
+                }
+
+            }
+
+            .attention-situation {
+                .attention {
+                    display: inline-block;
+                    width: 2.6rem;
+                    height: 1rem;
+                    border-radius: .3rem;
+                    background-color: rgba(109, 93, 85, .6);
+                    color: rgb(171, 159, 149);
+                    text-align: center;
+                    font-size: .54rem;
+                    line-height: 1rem;
+                }
+
+                .icon-pinglun {
+                    display: inline-block;
+                    width: 1.2rem;
+                    height: 1rem;
+                    border-radius: .3rem;
+                    background-color: rgba(35, 31, 28, .7);
+                    color: rgb(218, 214, 214);
+                    text-align: center;
+                    font-size: .54rem;
+                    line-height: 1rem;
+                }
+            }
+        }
+
+        .summary {
+            padding-left: .27rem;
+            color: rgb(251, 248, 246);
+            font-size: .54rem;
+            font-weight: 100;
+            line-height: 1.9rem;
+            border-bottom: .03rem solid rgb(114, 98, 87);
+        }
+
+        .summary::after {
+            content: '  关于我 >';
+            font-size: .54rem;
+            color: rgb(160, 147, 140);
+        }
+
+        .follow-info {
+            margin-top: .3rem;
+            padding-left: .27rem;
+            color: rgb(251, 248, 246);
+            font-size: .54rem;
+            font-weight: 300;
+            text-align: left;
+
+            i {
+                margin-right: .4rem;
+            }
+        }
+    }
+}
+
+nav {
+    border-radius: .3rem;
+
+    // margin: 0 auto;
+    display: flex;
+    background-color: rgb(242, 242, 242);
+    height: 1.8rem;
+    width: 15rem;
+    padding-left: .5rem;
+
+    span {
+        margin-right: 1rem;
+        font-size: .6rem;
+        line-height: 1.9rem;
+        // font-weight: 550;
+        color: rgb(139, 139, 139);
+    }
+
+    span.active {
+        color: rgb(42, 42, 42);
+        // border-bottom: .1rem solid black;
+        text-decoration: underline;
+        font-weight: 550;
+    }
+}
+
+.active_record {
+    background-color: white;
+    width: 15rem;
+    height: 6.9rem;
+
+    header {
+        text-align: left;
+        padding-left: .69rem;
+        font-size: .65rem;
+        color: rgb(42, 42, 42);
+        font-weight: 550;
+        padding-top: .44rem;
+    }
+
+    .middle {
+        display: flex;
+        justify-content: center;
+
+        img {
+            width: 4.4rem;
+            height: 2.4rem;
+        }
+
+        div[class$="box"] {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            padding-top: .4rem;
+            font-size: .5rem;
+            color: rgb(42, 42, 42);
+
+            span {
+                padding-top: .1rem;
+            }
+
+        }
+
+        .record-left-box {
+            padding-right: 1.3rem;
+        }
+
+        .record-right-box {
+            padding-left: 1.3rem;
+        }
+    }
+
+    .thermodynamic_chart_button {
+        margin-top: -.3rem;
+
+        .iconfont {
+            float: right;
+            margin-right: .15rem;
+        }
+    }
+}
+
+.joined_group {
+    background-color: white;
+    width: 15rem;
+    height: 4rem;
+    margin-top: .3rem;
+
+    header {
+        text-align: left;
+        padding-left: .69rem;
+        font-size: .65rem;
+        color: rgb(42, 42, 42);
+        padding-top: .44rem;
+    }
+
+    .list {
+        display: flex;
+        justify-content: space-between;
+
+        img {
+            width: 2rem;
+            height: 2rem;
+            vertical-align: middle;
+        }
+
+        section {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            font-size: .4rem;
+            color: rgb(27, 27, 27);
+            text-align: center;
+            line-height: 1.5rem;
+            padding-left: .2rem;
+            font-weight: 550;
+        }
+
+        .reading {
+            display: flex;
+            padding-left: .6rem;
+
+            span:nth-child(2) {
+                font-size: .2rem !important;
+                line-height: .05rem;
+                color: rgb(163, 163, 163);
+                font-weight: normal;
+            }
+        }
+
+        .classic {
+            display: flex;
+            padding-right: 2.2rem;
+
+            span:nth-child(2) {
+                font-size: .2rem !important;
+                line-height: .05rem;
+                color: rgb(163, 163, 163);
+                padding-left: .6rem;
+                font-weight: normal;
+            }
+        }
+    }
+}
+
+.select_name {
+    text-align: left;
+    color: rgb(174, 174, 174);
+    font-size: .54rem;
+    padding-left: .25rem;
+    margin-top: .2rem;
+}
+
+.select_card {
+    width: 15rem;
+    margin-top: .15rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    div[class^="card"] {
+        position: relative;
+        width: 48.5%;
+        height: 10rem;
+        border-radius: .5rem;
+        margin-bottom: .5rem;
+        background-color: white;
+        text-align: justify;
+        font-size: .6rem;
+
+        img {
+            width: 100%;
+            height: 48%;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: .4rem;
+            padding-left: .27rem;
+            font-size: .3rem;
+            color: rgb(132, 132, 132);
+        }
+    }
+}
+
+.dynamic-area {
+    background-color: #fff;
+    .dynamic-nav {
+        position: relative;
+        height: 1.4rem;
+        .nav-switch{
+            position: absolute;
+            right: .1rem;
+            top: .55rem;
+            height: 0.8rem;
+            background-color: #f5f7f6;
+            border-radius: .3rem;
+            span {
+                float: right;
+                width: 1.6rem;
+                height: 0.7rem;
+                border-radius: .2rem;
+                font-size: .42rem;
+                color: #929493;
+                text-align: center;
+            }
+            .active{
+                border: .01rem solid #dbdcdc;
+                background-color: #fcfdfd;
+                color: #0c0d0d;
+            }
+        }
+        
+    }
+
+    .total-info {
+        margin-bottom: .2rem;
+        background-color: rgb(255, 255, 255);
+
+        .user-info {
+            height: 1.4rem;
+            display: flex;
+            justify-content: space-between;
+
+            .user {
+                span {
+                    font-size: 0.48rem;
+                    // font-weight: 550;
+                    margin-left: .2rem;
+                    color: rgb(132, 132, 132);
+                }
+
+                img {
+                    width: 1.4rem;
+                    height: 1.4rem;
+                    border-radius: .7rem;
+                    margin-top: .2rem;
+                    margin-left: .1rem;
+                    vertical-align: middle
+                }
+            }
+
+            .icon-gengduo {
+                font-size: 0.9rem;
+                margin-right: 0.4rem;
+                text-align: center;
+                line-height: 1.4rem;
+            }
+        }
+
+        .msg-info {
+            margin-top: .66rem;
+            margin-left: .14rem;
+            color: rgb(27, 27, 27);
+            // font-weight: 550;
+            text-align: left;
+            font-size: 0.52rem;
+        }
+
+        .pic-info {
+            margin-top: .2rem;
+            border-radius: .3rem;
+            overflow: hidden;
+
+            img {
+                margin-left: .03rem;
+                width: 31%;
+                height: 4.6333rem;
+            }
+        }
+
+        .other-info {
+            display: flex;
+
+            .iconfont {
+                flex: 1;
+                font-size: .56rem;
+                font-weight: 300;
+                line-height: 0.85rem;
+                text-align: center;
+            }
+        }
+    }
+}

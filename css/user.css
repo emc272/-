@@ -1,0 +1,486 @@
+a {
+  text-decoration: none;
+}
+html {
+  font-size: 50px;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+@media screen and (min-width: 320px) {
+  html {
+    font-size: 21.33333333px;
+  }
+}
+@media screen and (min-width: 360px) {
+  html {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 375px) {
+  html {
+    font-size: 25px;
+  }
+}
+@media screen and (min-width: 384px) {
+  html {
+    font-size: 25.6px;
+  }
+}
+@media screen and (min-width: 400px) {
+  html {
+    font-size: 26.66666667px;
+  }
+}
+@media screen and (min-width: 414px) {
+  html {
+    font-size: 27.6px;
+  }
+}
+@media screen and (min-width: 424px) {
+  html {
+    font-size: 28.26666667px;
+  }
+}
+@media screen and (min-width: 480px) {
+  html {
+    font-size: 32px;
+  }
+}
+@media screen and (min-width: 540px) {
+  html {
+    font-size: 36px;
+  }
+}
+@media screen and (min-width: 720px) {
+  html {
+    font-size: 48px;
+  }
+}
+@media screen and (min-width: 750px) {
+  html {
+    font-size: 50px;
+  }
+}
+body {
+  min-width: 320px;
+  width: 15rem;
+  height: 90rem;
+  margin: 0 auto;
+  line-height: 1.5;
+  font-family: Arial, Helvetica;
+  background: #F2F2F2;
+  text-align: center;
+}
+.vague_pic {
+  overflow: hidden;
+  z-index: -1;
+  position: absolute;
+  top: -1.8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15rem;
+  height: 15rem;
+  border-bottom: 0.18rem solid #5e483b;
+  background: url(../assets/uploads/36180475.jpg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  -webkit-filter: blur(18px);
+  filter: blur(18px);
+}
+.dynamic-header {
+  display: flex;
+  display: none;
+  justify-content: space-between;
+  width: 15rem;
+  background-color: #fff;
+}
+.dynamic-header .iconfont {
+  font-size: 1.5rem;
+  padding-left: 0.53rem;
+  font-weight: 550;
+}
+.dynamic-header .dynamic-user-info {
+  padding-top: 0.27rem;
+  margin-left: -2.2rem;
+}
+.dynamic-header .dynamic-user-info img {
+  float: left;
+  width: 1.8rem;
+  height: 1.8em;
+  border-radius: 0.9rem;
+}
+.dynamic-header .dynamic-user-info .total {
+  padding-left: 0.23rem;
+  float: left;
+  display: flex;
+  vertical-align: top;
+  flex-direction: column;
+}
+.dynamic-header .dynamic-user-info .total .user-name {
+  font-weight: 550;
+  font-size: 0.7rem;
+}
+.dynamic-header .dynamic-user-info .total .bean-number {
+  color: #1b1b1b;
+  font-size: 0.53rem;
+  text-align: left;
+  line-height: 0.87rem;
+}
+.user-total-info {
+  width: 15rem;
+  height: 14rem;
+}
+.user-total-info header {
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  padding-left: 0.3rem;
+}
+.user-total-info header .iconfont {
+  font-size: 0.9rem;
+}
+.user-total-info img {
+  display: block;
+  margin: 0.5rem auto 0.4rem;
+  width: 3.4rem;
+  height: 3.4rem;
+  border-radius: 1.7rem;
+  border: 0.08rem solid white;
+}
+.user-total-info .boiling_water {
+  margin: 0 auto;
+  height: 1.2rem;
+  width: 4.2rem;
+  background-color: #5f5b58;
+  border-radius: 0.37rem;
+  border: 0.03rem solid black;
+}
+.user-total-info .boiling_water .icon-dianreshuihu {
+  float: left;
+  display: inline-block;
+  height: 100%;
+  width: 36%;
+  border-radius: 0.3rem;
+  background-color: #262626;
+  text-align: center;
+  line-height: 1.2rem;
+  color: red;
+  font-size: 0.8rem;
+}
+.user-total-info .boiling_water .water_number {
+  float: left;
+  display: inline-block;
+  height: 100%;
+  width: 64%;
+  text-align: center;
+  line-height: 1.2rem;
+  color: white;
+  font-size: 0.58rem;
+}
+.user-total-info .user-info {
+  margin-top: 0.8rem;
+}
+.user-total-info .user-info .header-info {
+  display: flex;
+  justify-content: space-between;
+}
+.user-total-info .user-info .header-info .user-name .name {
+  padding-left: 0.17rem;
+  color: #fbf8f6;
+  font-size: 0.84rem;
+  font-weight: 300;
+  line-height: 1.8rem;
+}
+.user-total-info .user-info .header-info .user-name .information {
+  padding-left: 0.27rem;
+  color: #fbf8f6;
+  font-size: 0.34rem;
+  font-weight: 100;
+  line-height: 0.1rem;
+}
+.user-total-info .user-info .header-info .attention-situation .attention {
+  display: inline-block;
+  width: 2.6rem;
+  height: 1rem;
+  border-radius: 0.3rem;
+  background-color: rgba(109, 93, 85, 0.6);
+  color: #ab9f95;
+  text-align: center;
+  font-size: 0.54rem;
+  line-height: 1rem;
+}
+.user-total-info .user-info .header-info .attention-situation .icon-pinglun {
+  display: inline-block;
+  width: 1.2rem;
+  height: 1rem;
+  border-radius: 0.3rem;
+  background-color: rgba(35, 31, 28, 0.7);
+  color: #dad6d6;
+  text-align: center;
+  font-size: 0.54rem;
+  line-height: 1rem;
+}
+.user-total-info .user-info .summary {
+  padding-left: 0.27rem;
+  color: #fbf8f6;
+  font-size: 0.54rem;
+  font-weight: 100;
+  line-height: 1.9rem;
+  border-bottom: 0.03rem solid #726257;
+}
+.user-total-info .user-info .summary::after {
+  content: '  关于我 >';
+  font-size: 0.54rem;
+  color: #a0938c;
+}
+.user-total-info .user-info .follow-info {
+  margin-top: 0.3rem;
+  padding-left: 0.27rem;
+  color: #fbf8f6;
+  font-size: 0.54rem;
+  font-weight: 300;
+  text-align: left;
+}
+.user-total-info .user-info .follow-info i {
+  margin-right: 0.4rem;
+}
+nav {
+  border-radius: 0.3rem;
+  display: flex;
+  background-color: #f2f2f2;
+  height: 1.8rem;
+  width: 15rem;
+  padding-left: 0.5rem;
+}
+nav span {
+  margin-right: 1rem;
+  font-size: 0.6rem;
+  line-height: 1.9rem;
+  color: #8b8b8b;
+}
+nav span.active {
+  color: #2a2a2a;
+  text-decoration: underline;
+  font-weight: 550;
+}
+.active_record {
+  background-color: white;
+  width: 15rem;
+  height: 6.9rem;
+}
+.active_record header {
+  text-align: left;
+  padding-left: 0.69rem;
+  font-size: 0.65rem;
+  color: #2a2a2a;
+  font-weight: 550;
+  padding-top: 0.44rem;
+}
+.active_record .middle {
+  display: flex;
+  justify-content: center;
+}
+.active_record .middle img {
+  width: 4.4rem;
+  height: 2.4rem;
+}
+.active_record .middle div[class$="box"] {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 0.4rem;
+  font-size: 0.5rem;
+  color: #2a2a2a;
+}
+.active_record .middle div[class$="box"] span {
+  padding-top: 0.1rem;
+}
+.active_record .middle .record-left-box {
+  padding-right: 1.3rem;
+}
+.active_record .middle .record-right-box {
+  padding-left: 1.3rem;
+}
+.active_record .thermodynamic_chart_button {
+  margin-top: -0.3rem;
+}
+.active_record .thermodynamic_chart_button .iconfont {
+  float: right;
+  margin-right: 0.15rem;
+}
+.joined_group {
+  background-color: white;
+  width: 15rem;
+  height: 4rem;
+  margin-top: 0.3rem;
+}
+.joined_group header {
+  text-align: left;
+  padding-left: 0.69rem;
+  font-size: 0.65rem;
+  color: #2a2a2a;
+  padding-top: 0.44rem;
+}
+.joined_group .list {
+  display: flex;
+  justify-content: space-between;
+}
+.joined_group .list img {
+  width: 2rem;
+  height: 2rem;
+  vertical-align: middle;
+}
+.joined_group .list section {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.4rem;
+  color: #1b1b1b;
+  text-align: center;
+  line-height: 1.5rem;
+  padding-left: 0.2rem;
+  font-weight: 550;
+}
+.joined_group .list .reading {
+  display: flex;
+  padding-left: 0.6rem;
+}
+.joined_group .list .reading span:nth-child(2) {
+  font-size: 0.2rem !important;
+  line-height: 0.05rem;
+  color: #a3a3a3;
+  font-weight: normal;
+}
+.joined_group .list .classic {
+  display: flex;
+  padding-right: 2.2rem;
+}
+.joined_group .list .classic span:nth-child(2) {
+  font-size: 0.2rem !important;
+  line-height: 0.05rem;
+  color: #a3a3a3;
+  padding-left: 0.6rem;
+  font-weight: normal;
+}
+.select_name {
+  text-align: left;
+  color: #aeaeae;
+  font-size: 0.54rem;
+  padding-left: 0.25rem;
+  margin-top: 0.2rem;
+}
+.select_card {
+  width: 15rem;
+  margin-top: 0.15rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.select_card div[class^="card"] {
+  position: relative;
+  width: 48.5%;
+  height: 10rem;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+  background-color: white;
+  text-align: justify;
+  font-size: 0.6rem;
+}
+.select_card div[class^="card"] img {
+  width: 100%;
+  height: 48%;
+}
+.select_card div[class^="card"] .footer {
+  position: absolute;
+  bottom: 0.4rem;
+  padding-left: 0.27rem;
+  font-size: 0.3rem;
+  color: #848484;
+}
+.dynamic-area {
+  background-color: #fff;
+}
+.dynamic-area .dynamic-nav {
+  position: relative;
+  height: 1.4rem;
+}
+.dynamic-area .dynamic-nav .nav-switch {
+  position: absolute;
+  right: 0.1rem;
+  top: 0.55rem;
+  height: 0.8rem;
+  background-color: #f5f7f6;
+  border-radius: 0.3rem;
+}
+.dynamic-area .dynamic-nav .nav-switch span {
+  float: right;
+  width: 1.6rem;
+  height: 0.7rem;
+  border-radius: 0.2rem;
+  font-size: 0.42rem;
+  color: #929493;
+  text-align: center;
+}
+.dynamic-area .dynamic-nav .nav-switch .active {
+  border: 0.01rem solid #dbdcdc;
+  background-color: #fcfdfd;
+  color: #0c0d0d;
+}
+.dynamic-area .total-info {
+  margin-bottom: 0.2rem;
+  background-color: #ffffff;
+}
+.dynamic-area .total-info .user-info {
+  height: 1.4rem;
+  display: flex;
+  justify-content: space-between;
+}
+.dynamic-area .total-info .user-info .user span {
+  font-size: 0.48rem;
+  margin-left: 0.2rem;
+  color: #848484;
+}
+.dynamic-area .total-info .user-info .user img {
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 0.7rem;
+  margin-top: 0.2rem;
+  margin-left: 0.1rem;
+  vertical-align: middle;
+}
+.dynamic-area .total-info .user-info .icon-gengduo {
+  font-size: 0.9rem;
+  margin-right: 0.4rem;
+  text-align: center;
+  line-height: 1.4rem;
+}
+.dynamic-area .total-info .msg-info {
+  margin-top: 0.66rem;
+  margin-left: 0.14rem;
+  color: #1b1b1b;
+  text-align: left;
+  font-size: 0.52rem;
+}
+.dynamic-area .total-info .pic-info {
+  margin-top: 0.2rem;
+  border-radius: 0.3rem;
+  overflow: hidden;
+}
+.dynamic-area .total-info .pic-info img {
+  margin-left: 0.03rem;
+  width: 31%;
+  height: 4.6333rem;
+}
+.dynamic-area .total-info .other-info {
+  display: flex;
+}
+.dynamic-area .total-info .other-info .iconfont {
+  flex: 1;
+  font-size: 0.56rem;
+  font-weight: 300;
+  line-height: 0.85rem;
+  text-align: center;
+}
