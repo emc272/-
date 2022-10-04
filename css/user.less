@@ -328,7 +328,9 @@ nav {
 .active_record {
     background-color: white;
     width: 15rem;
-    height: 6.9rem;
+    // height: 13.4rem;
+    border-radius: .3rem;
+
 
     header {
         text-align: left;
@@ -372,11 +374,67 @@ nav {
     }
 
     .thermodynamic_chart_button {
+        height: 1.2rem;
         margin-top: -.3rem;
 
         .iconfont {
             float: right;
             margin-right: .15rem;
+        }
+
+        .icon-shangyi {
+            font-size: .3rem;
+            margin-right: .31rem;
+        }
+    }
+
+    .thermodynamic_chart {
+        display: none;
+        position: relative;
+        height: 6rem;
+
+        .iconfont {
+            position: absolute;
+            left: 0rem;
+            top: 4.76rem;
+            color: #9f9f9f;
+            font-size: .6rem;
+        }
+
+        // position: relative;
+        // text-align: center;
+        .thermodynamic_chart_svg {
+            fill: #f7f7f7;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            font-weight: 200;
+            font-size: .34rem;
+
+            text {
+                stroke: #d4d4d4;
+
+            }
+
+            .js-calendar-graph {
+
+                // word-wrap: break-word;
+                // display: block;
+                // position: absolute;
+                // top:4rem;
+                // left: 50%;
+                // transform: translateX(50%);
+                // margin: 0 auto;
+                .year,
+                .active {
+                    stroke: none;
+                    fill: black
+                }
+
+                .year {
+                    font-size: .44rem;
+                }
+            }
         }
     }
 }
@@ -486,16 +544,19 @@ nav {
 
 .dynamic-area {
     background-color: #fff;
+
     .dynamic-nav {
         position: relative;
         height: 1.4rem;
-        .nav-switch{
+
+        .nav-switch {
             position: absolute;
             right: .1rem;
             top: .55rem;
             height: 0.8rem;
             background-color: #f5f7f6;
             border-radius: .3rem;
+
             span {
                 float: right;
                 width: 1.6rem;
@@ -505,13 +566,14 @@ nav {
                 color: #929493;
                 text-align: center;
             }
-            .active{
+
+            .active {
                 border: .01rem solid #dbdcdc;
                 background-color: #fcfdfd;
                 color: #0c0d0d;
             }
         }
-        
+
     }
 
     .total-info {
@@ -582,4 +644,176 @@ nav {
             }
         }
     }
+}
+
+.user-details {
+
+    // height: 100%;
+    .full_vague_pic {
+        z-index: -1;
+        position: absolute;
+        top: -1.8rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 15rem;
+        height: 38rem;
+        border-left: 1.38rem solid rgb(94, 72, 59);
+        border-right: 1.38rem solid rgb(94, 72, 59);
+        // border-bottom: .18rem solid rgb(94, 72, 59);
+        background: url(../assets/uploads/36180475.jpg);
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover;
+        -webkit-filter: blur(30px);
+        filter: blur(30px);
+    }
+
+    .user-full-info {
+        padding-top: .4rem;
+        // width: 15rem;
+        // height: 38rem;
+        // border-left: 1.38rem solid rgb(94, 72, 59);
+        // border-right: 1.38rem solid rgb(94, 72, 59);
+        // border-bottom: .18rem solid rgb(94, 72, 59);
+        // background: url(../assets/uploads/36180475.jpg);
+        // background-repeat: no-repeat;
+        // background-position: top;
+        // background-size: cover;
+        // -webkit-filter: blur(30px);
+        // filter: blur(30px);
+        color: white;
+        .icon-guanbi_o {
+            text-align: left;
+            padding-left: .3rem;
+            // color: #000;
+            font-size: .9rem;
+            font-weight: 550;
+            margin-bottom: .8rem;
+        }
+
+        .full-info {
+            display: flex;
+            justify-content: space-between;
+
+            .left-info {
+                padding-left: .2rem;
+                font-size: .5rem;
+                text-align: left;
+                .name{
+                    font-weight: 550;
+                    font-size: .7rem;
+                    margin-bottom: .42rem;
+                }
+            }
+
+            .right-info {
+                padding-right: .2rem;
+                img {
+                    width: 1.8rem;
+                    height: 1.8em;
+                    border-radius: .9rem;
+                }
+            }
+        }
+
+        .in-douban{
+            margin-top: .7rem;
+            header{
+                font-size: .6rem;
+                font-weight: 550;
+                text-align: left;
+                margin-bottom: .35rem;
+                padding-left: .2rem;
+            }
+            .body{
+                display: flex;
+                div[class^="douban"]{
+                    width: 2.6rem;
+                    height: 2.65em;
+                    border-right: .02rem solid #000;
+                    display: flex;
+                    flex-direction: column;
+                    font-size: .54rem;
+                    .number{
+                        font-weight: 550;
+                    }
+                }
+            }
+        }
+        .user-about{
+            margin-top: .7rem;
+            header{
+                font-size: .6rem;
+                font-weight: 550;
+                text-align: left;
+                margin-bottom: .35rem;
+                padding-left: .2rem;
+            }
+            .content{
+                padding-left: .2rem;
+                text-align: left;
+                // font-weight: 550;
+                font-size: .54rem;
+                p:first-child{
+                    margin-bottom: .46rem;
+                }
+            }
+        }
+        .others{
+            .boiling_water {
+                position: absolute;
+                bottom: 1.2rem;
+                left: 3.8rem;
+                margin: 0 auto;
+                height: 1.2rem;
+                width: 4.2rem;
+                background-color: rgb(95, 91, 88);
+                border-radius: .37rem;
+                border: .03rem solid black;
+        
+                .icon-dianreshuihu {
+                    float: left;
+                    display: inline-block;
+                    height: 100%;
+                    width: 36%;
+                    border-radius: .3rem;
+                    background-color: rgb(38, 38, 38);
+                    text-align: center;
+                    line-height: 1.2rem;
+                    color: red;
+                    font-size: .8rem;
+                }
+        
+                .water_number {
+                    float: left;
+                    display: inline-block;
+                    height: 100%;
+                    width: 64%;
+                    text-align: center;
+                    line-height: 1.2rem;
+                    color: white;
+                    font-size: .58rem;
+                }
+            }
+            .icon-pinglun {
+                position: absolute;
+                bottom: 1.2rem;
+                left: 8.6rem;
+                display: inline-block;
+                width: 1.2rem;
+                height: 1.2rem;
+                border-radius: .3rem;
+                background-color: rgba(35, 31, 28, .7);
+                color: rgb(218, 214, 214);
+                text-align: center;
+                font-size: .54rem;
+                line-height: 1rem;
+                line-height: 1.2rem;
+            }
+        }
+    }
+}
+
+.user-index{
+    display: none;
 }

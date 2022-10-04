@@ -270,7 +270,7 @@ nav span.active {
 .active_record {
   background-color: white;
   width: 15rem;
-  height: 6.9rem;
+  border-radius: 0.3rem;
 }
 .active_record header {
   text-align: left;
@@ -306,11 +306,47 @@ nav span.active {
   padding-left: 1.3rem;
 }
 .active_record .thermodynamic_chart_button {
+  height: 1.2rem;
   margin-top: -0.3rem;
 }
 .active_record .thermodynamic_chart_button .iconfont {
   float: right;
   margin-right: 0.15rem;
+}
+.active_record .thermodynamic_chart_button .icon-shangyi {
+  font-size: 0.3rem;
+  margin-right: 0.31rem;
+}
+.active_record .thermodynamic_chart {
+  display: none;
+  position: relative;
+  height: 6rem;
+}
+.active_record .thermodynamic_chart .iconfont {
+  position: absolute;
+  left: 0rem;
+  top: 4.76rem;
+  color: #9f9f9f;
+  font-size: 0.6rem;
+}
+.active_record .thermodynamic_chart .thermodynamic_chart_svg {
+  fill: #f7f7f7;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  font-weight: 200;
+  font-size: 0.34rem;
+}
+.active_record .thermodynamic_chart .thermodynamic_chart_svg text {
+  stroke: #d4d4d4;
+}
+.active_record .thermodynamic_chart .thermodynamic_chart_svg .js-calendar-graph .year,
+.active_record .thermodynamic_chart .thermodynamic_chart_svg .js-calendar-graph .active {
+  stroke: none;
+  fill: black;
+}
+.active_record .thermodynamic_chart .thermodynamic_chart_svg .js-calendar-graph .year {
+  font-size: 0.44rem;
 }
 .joined_group {
   background-color: white;
@@ -483,4 +519,147 @@ nav span.active {
   font-weight: 300;
   line-height: 0.85rem;
   text-align: center;
+}
+.user-details .full_vague_pic {
+  z-index: -1;
+  position: absolute;
+  top: -1.8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15rem;
+  height: 38rem;
+  border-left: 1.38rem solid #5e483b;
+  border-right: 1.38rem solid #5e483b;
+  background: url(../assets/uploads/36180475.jpg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  -webkit-filter: blur(30px);
+  filter: blur(30px);
+}
+.user-details .user-full-info {
+  padding-top: 0.4rem;
+  color: white;
+}
+.user-details .user-full-info .icon-guanbi_o {
+  text-align: left;
+  padding-left: 0.3rem;
+  font-size: 0.9rem;
+  font-weight: 550;
+  margin-bottom: 0.8rem;
+}
+.user-details .user-full-info .full-info {
+  display: flex;
+  justify-content: space-between;
+}
+.user-details .user-full-info .full-info .left-info {
+  padding-left: 0.2rem;
+  font-size: 0.5rem;
+  text-align: left;
+}
+.user-details .user-full-info .full-info .left-info .name {
+  font-weight: 550;
+  font-size: 0.7rem;
+  margin-bottom: 0.42rem;
+}
+.user-details .user-full-info .full-info .right-info {
+  padding-right: 0.2rem;
+}
+.user-details .user-full-info .full-info .right-info img {
+  width: 1.8rem;
+  height: 1.8em;
+  border-radius: 0.9rem;
+}
+.user-details .user-full-info .in-douban {
+  margin-top: 0.7rem;
+}
+.user-details .user-full-info .in-douban header {
+  font-size: 0.6rem;
+  font-weight: 550;
+  text-align: left;
+  margin-bottom: 0.35rem;
+  padding-left: 0.2rem;
+}
+.user-details .user-full-info .in-douban .body {
+  display: flex;
+}
+.user-details .user-full-info .in-douban .body div[class^="douban"] {
+  width: 2.6rem;
+  height: 2.65em;
+  border-right: 0.02rem solid #000;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.54rem;
+}
+.user-details .user-full-info .in-douban .body div[class^="douban"] .number {
+  font-weight: 550;
+}
+.user-details .user-full-info .user-about {
+  margin-top: 0.7rem;
+}
+.user-details .user-full-info .user-about header {
+  font-size: 0.6rem;
+  font-weight: 550;
+  text-align: left;
+  margin-bottom: 0.35rem;
+  padding-left: 0.2rem;
+}
+.user-details .user-full-info .user-about .content {
+  padding-left: 0.2rem;
+  text-align: left;
+  font-size: 0.54rem;
+}
+.user-details .user-full-info .user-about .content p:first-child {
+  margin-bottom: 0.46rem;
+}
+.user-details .user-full-info .others .boiling_water {
+  position: absolute;
+  bottom: 1.2rem;
+  left: 3.8rem;
+  margin: 0 auto;
+  height: 1.2rem;
+  width: 4.2rem;
+  background-color: #5f5b58;
+  border-radius: 0.37rem;
+  border: 0.03rem solid black;
+}
+.user-details .user-full-info .others .boiling_water .icon-dianreshuihu {
+  float: left;
+  display: inline-block;
+  height: 100%;
+  width: 36%;
+  border-radius: 0.3rem;
+  background-color: #262626;
+  text-align: center;
+  line-height: 1.2rem;
+  color: red;
+  font-size: 0.8rem;
+}
+.user-details .user-full-info .others .boiling_water .water_number {
+  float: left;
+  display: inline-block;
+  height: 100%;
+  width: 64%;
+  text-align: center;
+  line-height: 1.2rem;
+  color: white;
+  font-size: 0.58rem;
+}
+.user-details .user-full-info .others .icon-pinglun {
+  position: absolute;
+  bottom: 1.2rem;
+  left: 8.6rem;
+  display: inline-block;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 0.3rem;
+  background-color: rgba(35, 31, 28, 0.7);
+  color: #dad6d6;
+  text-align: center;
+  font-size: 0.54rem;
+  line-height: 1rem;
+  line-height: 1.2rem;
+}
+.user-index {
+  display: none;
 }
