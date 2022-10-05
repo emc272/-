@@ -6,6 +6,27 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "8229196",
+      "name": "向右旋转",
+      "font_class": "xiangyouxuanzhuan",
+      "unicode": "e66a",
+      "unicode_decimal": 58986
+    },
+    {
+      "icon_id": "629356",
+      "name": "刷新",
+      "font_class": "shuaxin",
+      "unicode": "e650",
+      "unicode_decimal": 58960
+    },
+    {
+      "icon_id": "4933244",
+      "name": "笑脸",
+      "font_class": "xiaolian",
+      "unicode": "e702",
+      "unicode_decimal": 59138
+    },
+    {
       "icon_id": "249477",
       "name": "上移",
       "font_class": "shangyi",

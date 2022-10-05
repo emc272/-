@@ -207,6 +207,20 @@ body {
   line-height: 0.85rem;
   text-align: center;
 }
+.icon-shuaxin {
+  height: 3rem;
+  width: 2rem;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.4rem;
+  transform-origin: center 14.8%;
+  transition: all 2s;
+}
+.shuaxin-top {
+  height: 0.5rem;
+  margin-top: 3.2rem;
+  transform-origin: center 88.8%;
+}
 .footer-nav {
   position: fixed;
   bottom: 0;

@@ -80,7 +80,7 @@ p {
 body {
     min-width: 320px;
     width: 15rem;
-    height: 90rem;
+    // height: 90rem;
     margin: 0 auto;
     line-height: 1.5;
     font-family: Arial, Helvetica;
@@ -276,12 +276,11 @@ body {
             font-weight: 100;
             line-height: 1.9rem;
             border-bottom: .03rem solid rgb(114, 98, 87);
-        }
 
-        .summary::after {
-            content: '  关于我 >';
-            font-size: .54rem;
-            color: rgb(160, 147, 140);
+            span {
+                font-size: .54rem;
+                color: rgb(160, 147, 140);
+            }
         }
 
         .follow-info {
@@ -682,6 +681,7 @@ nav {
         // -webkit-filter: blur(30px);
         // filter: blur(30px);
         color: white;
+
         .icon-guanbi_o {
             text-align: left;
             padding-left: .3rem;
@@ -699,7 +699,8 @@ nav {
                 padding-left: .2rem;
                 font-size: .5rem;
                 text-align: left;
-                .name{
+
+                .name {
                     font-weight: 550;
                     font-size: .7rem;
                     margin-bottom: .42rem;
@@ -708,6 +709,7 @@ nav {
 
             .right-info {
                 padding-right: .2rem;
+
                 img {
                     width: 1.8rem;
                     height: 1.8em;
@@ -716,50 +718,59 @@ nav {
             }
         }
 
-        .in-douban{
+        .in-douban {
             margin-top: .7rem;
-            header{
+
+            header {
                 font-size: .6rem;
                 font-weight: 550;
                 text-align: left;
                 margin-bottom: .35rem;
                 padding-left: .2rem;
             }
-            .body{
+
+            .body {
                 display: flex;
-                div[class^="douban"]{
+
+                div[class^="douban"] {
                     width: 2.6rem;
                     height: 2.65em;
                     border-right: .02rem solid #000;
                     display: flex;
                     flex-direction: column;
                     font-size: .54rem;
-                    .number{
+
+                    .number {
                         font-weight: 550;
                     }
                 }
             }
         }
-        .user-about{
+
+        .user-about {
             margin-top: .7rem;
-            header{
+
+            header {
                 font-size: .6rem;
                 font-weight: 550;
                 text-align: left;
                 margin-bottom: .35rem;
                 padding-left: .2rem;
             }
-            .content{
+
+            .content {
                 padding-left: .2rem;
                 text-align: left;
                 // font-weight: 550;
                 font-size: .54rem;
-                p:first-child{
+
+                p:first-child {
                     margin-bottom: .46rem;
                 }
             }
         }
-        .others{
+
+        .others {
             .boiling_water {
                 position: absolute;
                 bottom: 1.2rem;
@@ -770,7 +781,7 @@ nav {
                 background-color: rgb(95, 91, 88);
                 border-radius: .37rem;
                 border: .03rem solid black;
-        
+
                 .icon-dianreshuihu {
                     float: left;
                     display: inline-block;
@@ -783,7 +794,7 @@ nav {
                     color: red;
                     font-size: .8rem;
                 }
-        
+
                 .water_number {
                     float: left;
                     display: inline-block;
@@ -795,6 +806,7 @@ nav {
                     font-size: .58rem;
                 }
             }
+
             .icon-pinglun {
                 position: absolute;
                 bottom: 1.2rem;
@@ -814,6 +826,78 @@ nav {
     }
 }
 
-.user-index{
+.user-details {
+    transition: all 2s;
     display: none;
+}
+
+.transform_name,
+.thelun,
+.boiling_water,
+.big_avatar {
+    transition: all .6s;
+    z-index: 998;
+}
+
+.xiala {
+    position: absolute;
+    top: .8rem;
+    left: 5.8rem;
+    display: block;
+    width: 4rem;
+    height: 1rem;
+    border-radius: .3rem;
+    background-color: #6b5b50;
+    color: #ab9f95;
+    font-size: .44rem;
+    text-align: center;
+    line-height: 1rem;
+    display: none;
+
+}
+
+.fixed_nav {
+    position: fixed;
+    top:.6rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15.4rem;
+    height: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    z-index:999;
+    display: none;
+
+    .user_info {
+        display: flex;
+        padding-top: .1rem;
+        font-size: .59rem;
+        margin-left: -3.5rem;
+        font-weight: 550;
+
+        img {
+            width: 1.2rem;
+            height: 1.2rem;
+            border-radius: .6rem;
+        }
+
+        div {
+            vertical-align: middle;
+            padding-top: .2rem;
+            padding-left: .22rem;
+
+        }
+    }
+
+    .iconfont {
+        color: #00bb30;
+        font-size: .8rem;
+        padding-left: .3rem;
+    }
+
+    .icon-email {
+        font-size: 1rem;
+        padding-right: .3rem;
+    }
 }
