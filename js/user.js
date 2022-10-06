@@ -1,12 +1,28 @@
 window.onload = function () {
+    let dynamic_area = document.querySelector('.dynamic-area')
+    let dynamicHeight = dynamic_area.offsetTop
+
     //排他思想应用于用户界面导航栏
     let nav = document.querySelector('.nav')
+
     for (let i = 0; i <= 2; i++) {
         nav.children[i].addEventListener('click', function () {
             for (let j = 0; j <= 2; j++) {
                 nav.children[j].className = ''
             }
             this.className = 'active'
+            if(i == 0){
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            }
+            if(i === 1){
+                window.scrollTo({
+                    top: dynamicHeight,
+                    behavior: "smooth"
+                });
+            }
         })
     }
 
@@ -44,7 +60,9 @@ window.onload = function () {
         }
     })
 
-    //下滑召唤用户名单
+    //上拉召唤用户名单和下滑到一定程度召唤固定导航栏和左右滑动切换动态/主页
+
+    //上下滑动相关
     let user_index = document.querySelector('.user-index')
     let user_details = document.querySelector('.user-details')
     let p = document.querySelector('.xiala')
@@ -60,35 +78,64 @@ window.onload = function () {
     let tops = 0;
     let pageHeight = 0
     let scrollhei = 0
-    // user_index.onscroll = function() {
-        
 
-    // }
+    //左右滑动相关
+
+    let levels = 0
+    let left_slide = null
+    let right_slide = null
+
     user_index.ontouchstart = function (e) {
         moveY = e.changedTouches[0].clientY
+        moveX = e.changedTouches[0].clientX
         pageHeight = e.changedTouches[0].pageY
         this.ontouchmove = function (e) {
             scroll()
             //获取手指位移量
+
+            //左右滑动
+            levels = e.changedTouches[0].clientX - moveX
+
+            //下滑/上拉
             tops = e.changedTouches[0].clientY - moveY
-            if (pageHeight < 705) {
+            if (pageHeight < 405) {
                 if (tops < 0) {
                     tops = 0
                     //清空下拉事件
                     user_index.ontouchmove = null
 
-                    //头像缩小
                 } else if (tops > 180) {
                     p.style.display = 'block'
                 }
             }
-            // console.log(pageHeight);
-            // console.log(tops);
         }
         user_index.ontouchend = function () {
+
+            //左右滑动
+            if (levels < -70) {
+                levels = 0
+                left_slide = setTimeout(() => {
+                    window.scrollTo({
+                        top: dynamicHeight,
+                        behavior: "smooth"
+                    });
+                    clearTimeout(left_slide)   
+                },500);
+            } else if (levels > 70) {
+                levels = 0
+                right_slide = setTimeout(() => {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "smooth"
+                    });
+                    clearTimeout(right_slide)   
+                },500);
+            }
+
+            //下滑/上拉
             scroll()
             user_index.ontouchmove = null
-            if (pageHeight < 705) {
+            if (pageHeight < 405) {
                 if (tops < 180) {
                     this.style.top = 0;
                     p.style.display = "none"
@@ -115,6 +162,27 @@ window.onload = function () {
         }
     }
 
+    //补充，防止直接甩浏览器时判断失误
+    window.onscroll = function (e) {
+        scroll()
+        if(document.documentElement.scrollTop > 320){
+            nav.style.position = 'fixed'
+            nav.style.top = '1.43rem'
+            nav.style.left = '50%'
+            nav.style.width = '15rem'
+            nav.style.transform = 'translateX(-50%)'
+            nav.style.backgroundColor = 'white'
+        }
+        if(document.documentElement.scrollTop >= dynamicHeight){
+            nav.children[1].className = 'active'
+            nav.children[0].className = 'none'
+        }else{
+            nav.children[0].className = 'active'
+            nav.children[1].className = 'none'
+        }
+    }
+
+
     //关闭用户菜单
     user_details_close.addEventListener('click', () => {
         user_index.style.display = 'block'
@@ -136,13 +204,89 @@ window.onload = function () {
         }, 580);
     })
 
-    function scroll(){
-        scrollhei =  document.body.scrollTop || document.documentElement.scrollTop
-            if(scrollhei > 276){
-                //这一段代码主要是控制导航栏
-                fixed_nav.style.display = 'flex'
-            }else{
-                fixed_nav.style.display = 'none'
-            }
+    function scroll() {
+        scrollhei = document.body.scrollTop || document.documentElement.scrollTop
+        if (scrollhei > 276) {
+            //这一段代码主要是控制导航栏
+            fixed_nav.style.display = 'flex'
+        } else {
+            fixed_nav.style.display = 'none'
+            nav.style = ''
+        }
     }
+
+    //点击热水出现动画
+    let dianreshuihu = document.querySelector('.dianrenshuihu')
+    let water_number = document.querySelector('.water_number')
+    let tips = document.querySelector('.tips')
+    let number = 0
+    let flag = true
+
+    boiling_water.addEventListener('click', () => {
+        if (flag) {
+            flag = false
+
+            //数字增加
+            number = water_number.innerText
+            number++
+            water_number.innerText = number
+
+            //图标部分
+            dianreshuihu.style.transform = 'translateY(-3rem) scale(5)'
+            tips.style.opacity = '1'
+            tips.style.transform = 'translate(-2.2rem,-3rem) scale(1.2)'
+            setTimeout(() => {
+                tips.style.opacity = '0'
+                setTimeout(() => {
+                    tips.style.transform = ''
+                }, 1200);
+            }, 1200);
+
+            //回调地狱（有空的时候再来修改码风）
+            setTimeout(() => {
+                dianreshuihu.style.transition = 'all 1s'
+                dianreshuihu.style.transform = 'translate(-1rem,-6rem) scale(5)'
+                dianreshuihu.style.opacity = '0'
+                setTimeout(() => {
+                    dianreshuihu.style.transition = 'all .01s'
+                    dianreshuihu.style.transform = ''
+                    setTimeout(() => {
+                        dianreshuihu.style.opacity = '1'
+                        setTimeout(() => {
+                            dianreshuihu.style.transition = 'all .6s'
+                        });
+                    }, 50);
+                }, 1000);
+            }, 600);
+
+        } else {
+            //文字部分
+            dianreshuihu.style.color = '#505355'
+            tips.innerText = '今天已经提醒过他/她喝热水了'
+            tips.style.width = '7rem'
+            tips.style.transform = 'translate(-3.2rem,-3rem) scale(1.2)'
+            tips.style.opacity = '1'
+            setTimeout(() => {
+                tips.style.transition = 'opacity,transform .01s'
+                tips.style.opacity = '0'
+                tips.style.transform = ''
+                setTimeout(() => {
+                    tips.style.transition = 'opacity,transform 1.2s'
+                }, 50);
+            }, 1200);
+
+            //图标部分
+            setTimeout(() => {
+                dianreshuihu.style.color = ''
+            }, 1000);
+        }
+    })
+
+    //页面跳转
+    let jump_to_index = document.querySelector('.jump-to-index')
+
+    jump_to_index.addEventListener('click', () => {
+        window.location.href = "index.html";
+    })
+
 }

@@ -215,6 +215,7 @@ body {
   font-size: 1.4rem;
   transform-origin: center 14.8%;
   transition: all 2s;
+  display: none;
 }
 .shuaxin-top {
   height: 0.5rem;
@@ -259,58 +260,61 @@ body {
   left: 50%;
   transform: translateX(-50%);
   display: flex;
+  z-index: 5;
   display: none;
   width: 100%;
   height: 100%;
 }
-.sidebar .content {
+.sidebar .sidebar_content {
   width: 68%;
   height: 100%;
   background-color: #f7f7f7;
   position: relative;
+  z-index: 56;
 }
-.sidebar .content header {
+.sidebar .sidebar_content header {
+  padding-top: 0.28rem;
   display: flex;
   justify-content: space-between;
 }
-.sidebar .content header .icon-guanbi_o {
+.sidebar .sidebar_content header .icon-guanbi_o {
   padding-left: 1.333rem;
   line-height: 0.99rem;
   font-size: 0.93rem;
   font-weight: 700;
   color: #7f7f7f;
 }
-.sidebar .content header .icon-saoyisaosaomiao {
+.sidebar .sidebar_content header .icon-saoyisaosaomiao {
   padding-right: 0.4rem;
   line-height: 0.99rem;
   font-size: 0.73rem;
   font-weight: 550;
   color: #7f7f7f;
 }
-.sidebar .content .sidebar-user-info {
+.sidebar .sidebar_content .sidebar-user-info {
   height: 1.9rem;
   margin-top: 0.9rem;
   margin-left: 1.3rem;
   margin-bottom: 0.73rem;
 }
-.sidebar .content .sidebar-user-info img {
+.sidebar .sidebar_content .sidebar-user-info img {
   float: left;
   width: 1.8rem;
   height: 1.8em;
   border-radius: 0.9rem;
 }
-.sidebar .content .sidebar-user-info .total {
+.sidebar .sidebar_content .sidebar-user-info .total {
   padding-left: 0.23rem;
   float: left;
   display: flex;
   vertical-align: top;
   flex-direction: column;
 }
-.sidebar .content .sidebar-user-info .total .user-name {
+.sidebar .sidebar_content .sidebar-user-info .total .user-name {
   font-weight: 550;
   font-size: 0.7rem;
 }
-.sidebar .content .sidebar-user-info .total .bean-number {
+.sidebar .sidebar_content .sidebar-user-info .total .bean-number {
   width: 2.35rem;
   height: 1.74em;
   border-radius: 0.7rem;
@@ -320,20 +324,20 @@ body {
   text-align: center;
   line-height: 0.87rem;
 }
-.sidebar .content div[class^="colomn-content"] {
+.sidebar .sidebar_content div[class^="colomn-content"] {
   padding-left: 1.67rem;
   margin-bottom: 0.25rem;
 }
-.sidebar .content div[class^="colomn-content"] .iconfont {
+.sidebar .sidebar_content div[class^="colomn-content"] .iconfont {
   color: #7f7f7f;
   font-size: 0.8rem;
   font-weight: 600;
 }
-.sidebar .content div[class^="colomn-content"] .line-word {
+.sidebar .sidebar_content div[class^="colomn-content"] .line-word {
   padding-left: 0.3rem;
   font-size: 0.6rem;
 }
-.sidebar .content .details {
+.sidebar .sidebar_content .details {
   position: absolute;
   bottom: 2.5rem;
   left: 50%;
@@ -344,22 +348,22 @@ body {
   height: 4.96rem;
   background-color: #fff;
 }
-.sidebar .content .details div[class^="sidebar-footer-content"] {
+.sidebar .sidebar_content .details div[class^="sidebar-footer-content"] {
   width: 33.3%;
   display: flex;
   flex-direction: column;
   text-align: center;
   color: #7f7f7f;
 }
-.sidebar .content .details div[class^="sidebar-footer-content"] .iconfont {
+.sidebar .sidebar_content .details div[class^="sidebar-footer-content"] .iconfont {
   font-weight: 550;
   color: #808080;
   font-size: 0.84rem;
 }
-.sidebar .content .details div[class^="sidebar-footer-content"] .word {
+.sidebar .sidebar_content .details div[class^="sidebar-footer-content"] .word {
   font-size: 0.5rem;
 }
-.sidebar .content footer {
+.sidebar .sidebar_content footer {
   position: absolute;
   bottom: 0;
   color: #c8c8c8;
@@ -367,13 +371,18 @@ body {
   padding-left: 1.99rem;
   padding-bottom: 0.99rem;
 }
-.sidebar .content footer img {
+.sidebar .sidebar_content footer img {
   width: 0.99rem;
   height: 0.99rem;
   vertical-align: middle;
 }
-.sidebar .background {
+.background {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
   height: 100%;
-  width: 32%;
+  width: 15rem;
   background-color: rgba(0, 0, 0, 0.4);
+  display: none;
 }

@@ -108,51 +108,51 @@ body {
     filter: blur(18px);
 }
 
-.dynamic-header {
-    display: flex;
-    display: none;
-    justify-content: space-between;
-    width: 15rem;
-    background-color: #fff;
+// .dynamic-header {
+//     display: flex;
+//     // display: none;
+//     justify-content: space-between;
+//     width: 15rem;
+//     background-color: #fff;
 
-    .iconfont {
-        font-size: 1.5rem;
-        padding-left: .53rem;
-        font-weight: 550;
-    }
+//     .iconfont {
+//         font-size: 1.5rem;
+//         padding-left: .53rem;
+//         font-weight: 550;
+//     }
 
-    .dynamic-user-info {
-        padding-top: .27rem;
-        margin-left: -2.2rem;
+//     .dynamic-user-info {
+//         padding-top: .27rem;
+//         margin-left: -2.2rem;
 
-        img {
-            float: left;
-            width: 1.8rem;
-            height: 1.8em;
-            border-radius: .9rem;
-        }
+//         img {
+//             float: left;
+//             width: 1.8rem;
+//             height: 1.8em;
+//             border-radius: .9rem;
+//         }
 
-        .total {
-            padding-left: .23rem;
-            float: left;
-            display: flex;
-            vertical-align: top;
-            flex-direction: column;
+//         .total {
+//             padding-left: .23rem;
+//             float: left;
+//             display: flex;
+//             vertical-align: top;
+//             flex-direction: column;
 
-            .user-name {
-                font-weight: 550;
-                font-size: .7rem;
-            }
+//             .user-name {
+//                 font-weight: 550;
+//                 font-size: .7rem;
+//             }
 
-            .bean-number {
-                color: rgb(27, 27, 27);
-                font-size: .53rem;
-                text-align: left;
-                line-height: 0.87rem;
-            }
-        }
-    }
-}
+//             .bean-number {
+//                 color: rgb(27, 27, 27);
+//                 font-size: .53rem;
+//                 text-align: left;
+//                 line-height: 0.87rem;
+//             }
+//         }
+//     }
+// }
 
 .user-total-info {
     // position: absolute;
@@ -191,7 +191,7 @@ body {
         border-radius: .37rem;
         border: .03rem solid black;
 
-        .icon-dianreshuihu {
+        .reshui {
             float: left;
             display: inline-block;
             height: 100%;
@@ -199,9 +199,14 @@ body {
             border-radius: .3rem;
             background-color: rgb(38, 38, 38);
             text-align: center;
-            line-height: 1.2rem;
             color: red;
-            font-size: .8rem;
+
+            span {
+                display: inline-block;
+                transition: all .6s;
+                font-size: .8rem;
+                line-height: .01rem;
+            }
         }
 
         .water_number {
@@ -305,8 +310,9 @@ nav {
     display: flex;
     background-color: rgb(242, 242, 242);
     height: 1.8rem;
-    width: 15rem;
+    // width: 15rem;
     padding-left: .5rem;
+    z-index:4;
 
     span {
         margin-right: 1rem;
@@ -656,8 +662,8 @@ nav {
         transform: translateX(-50%);
         width: 15rem;
         height: 38rem;
-        border-left: 1.38rem solid rgb(94, 72, 59);
-        border-right: 1.38rem solid rgb(94, 72, 59);
+        // border-left: 1.38rem solid rgb(94, 72, 59);
+        // border-right: 1.38rem solid rgb(94, 72, 59);
         // border-bottom: .18rem solid rgb(94, 72, 59);
         background: url(../assets/uploads/36180475.jpg);
         background-repeat: no-repeat;
@@ -858,7 +864,7 @@ nav {
 
 .fixed_nav {
     position: fixed;
-    top:.6rem;
+    top: 0;
     left: 50%;
     transform: translateX(-50%);
     width: 15.4rem;
@@ -866,7 +872,7 @@ nav {
     display: flex;
     justify-content: space-between;
     background-color: white;
-    z-index:999;
+    z-index: 999;
     display: none;
 
     .user_info {
@@ -900,4 +906,21 @@ nav {
         font-size: 1rem;
         padding-right: .3rem;
     }
+}
+
+.tips{
+    // z-index: -2;
+    position: absolute;
+    top:6.8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4.4rem;
+    background-color: rgba(29, 31, 33,.8);
+    height: 1.3rem;
+    border-radius: .5rem;
+    font-size: .15rem;
+    color: #eaebec;
+    line-height: 1.3rem;
+    opacity: 0;
+    transition: opacity,transform 1.4s;
 }

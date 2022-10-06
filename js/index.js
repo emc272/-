@@ -4,13 +4,16 @@ window.onload = function () {
     let sidebar = document.querySelector('.sidebar')
     let sidebarButton = document.querySelector('.icon-cebianlan')
     let sidebarCloseButton = document.querySelector('.icon-guanbi_o')
+    let background = document.querySelector('.background')
 
     sidebarButton.addEventListener('click', function () {
         sidebar.style.display = 'flex';
+        background.style.display = 'block';
     })
 
     sidebarCloseButton.addEventListener('click', () => {
         sidebar.style.display = 'none';
+        background.style.display = 'none';
     })
 
     //主页显示数据
@@ -52,7 +55,7 @@ window.onload = function () {
     }
     //实现上拉懒加载和下滑刷新
 
-    let icon_shuaxin = document.querySelector('.shuaxin-bottom')
+    let shuaxin_bottom = document.querySelector('.shuaxin-bottom')
     let shuaxin_top = document.querySelector('.shuaxin-top')
     let flag = true
 
@@ -65,46 +68,56 @@ window.onload = function () {
     let distance = -82;
 
     recommend_content.ontouchstart = function (e) {
-        icon_shuaxin.style.cssText = 'display:block;'
 
         //下滑部分
         moveY = e.changedTouches[0].clientY
         pageHeight = e.changedTouches[0].pageY
-        shuaxin_top.style.display = "block"
+
+        let tops = 0
         this.ontouchmove = function (e) {
 
             //下滑部分
             tops = e.changedTouches[0].clientY - moveY
-            if (pageHeight < 705) {
+            if (pageHeight < 505) {
                 if (tops < 0) {
                     tops = 0
                     //清空下拉事件
                     this.ontouchmove = null
-                } else if (tops > 180) {
-                    shuaxin_top.style.transform = 'rotate(1440deg)'
+                } else if (tops > 80) {
+                    shuaxin_top.style.display = "block"
+                    setTimeout(() => {
+                        shuaxin_top.style.transform = 'rotate(1440deg)'
+                    });
                 }
             }
 
-
             //上拉部分
+            if ((scrollTop + clientHeight) >= (scrollHeight - distance)) {
+
+                shuaxin_bottom.style.display = "block"
+
+                setTimeout(() => {
+                    shuaxin_bottom.style.transform = `rotate(1440deg)`
+                });
+            }
+
             clientHeight = document.documentElement.clientHeight; //浏览器高度
             scrollHeight = document.body.scrollHeight;
             scrollTop = document.documentElement.scrollTop;
-            icon_shuaxin.style.cssText = `transform:rotate(1440deg);`
+
         }
 
         this.ontouchend = function () {
             //下滑部分
             this.ontouchmove = null
-            if (pageHeight < 705) {
-                if (tops < 180) {
-                    //控制刷新图标
-                    // this.style.top = 0;
-                    shuaxin_top.style.cssText = 'transform:rotate(0);display:none;'
+            shuaxin_top.style.cssText = 'transform:rotate(0);display:none;'
+            if (pageHeight < 405) {
+                if (tops < 80) {
                 } else {
                     tops = 0
-                    //清除提示信息
-                    shuaxin_top.style.cssText = 'transform:rotate(0);display:none;'
+                    // setTimeout(() => {
+                    //     shuaxin_top.style.transition = 'all 2s'
+                    // });
                     //刷新界面
                     randomArray(dataArr)
                     initDataView()
@@ -112,16 +125,59 @@ window.onload = function () {
             }
 
             //上拉部分
-            icon_shuaxin.style.cssText = 'transform:rotate(0);display:none;'
+            shuaxin_bottom.style.transition = 'all .01s'
+            shuaxin_bottom.style.transform = ''
+            shuaxin_bottom.style.display = 'none'
+            setTimeout(() => {
+                shuaxin_bottom.style.transition = 'all 2s'
+            });
+
             if ((scrollTop + clientHeight) >= (scrollHeight - distance)) {
                 dataArr.push({ userAvatar: './assets/uploads/36180475.jpg', userName: '豆瓣读书', msgInfo: '老照片 摄于公元2022年', picInfo: ['./assets/uploads/v2-00fd47b984b097ff6799c70eac688576_r.jpg', './assets/uploads/v2-368f17c7b49742d3653ee3d4623b5243_720w.jpg', './assets/uploads/v2-5789cc732e435e5d7d6d45717a08fe07_720w (3).jpg'], otherInfo: { dianzan: 191, pinglun: 3, loop: 4 } })
                 dataArr.push({ userAvatar: './assets/uploads/36180475.jpg', userName: '豆瓣读书', msgInfo: '老照片 摄于公元2022年', picInfo: ['./assets/uploads/v2-00fd47b984b097ff6799c70eac688576_r.jpg', './assets/uploads/v2-368f17c7b49742d3653ee3d4623b5243_720w.jpg', './assets/uploads/v2-5789cc732e435e5d7d6d45717a08fe07_720w (3).jpg'], otherInfo: { dianzan: 191, pinglun: 3, loop: 4 } })
                 initDataView()
             }
         }
-
-
     }
+
+    //页面跳转
+    let jump_to_user = document.querySelector('.jump-to-user')
+
+    jump_to_user.addEventListener('click', () => {
+        window.location.href = "user.html";
+    })
+
+    //侧边栏跟随移动
+
+    let x = 0
+    let movedx = 0
+    let xNumber = 0
+
+    sidebar.ontouchstart = function (e) {
+        x = e.changedTouches[0].pageX
+        this.ontouchmove = function (e) {
+            e.preventDefault()
+            movedx = x - e.changedTouches[0].pageX
+            // console.log(movedx);
+            if(movedx > 0){
+                this.style.left = (7.5 - movedx * .0325) + 'rem';
+            }
+        }
+        this.ontouchend = function(){
+            this.ontouchmove = null
+            
+            xNumber = this.style.left
+            xNumber = xNumber.split('r')[0]
+            if(xNumber <= 2.6 ){
+                this.style.left = ''
+                sidebarCloseButton.click()
+            }else{
+                this.style.left = '7.5rem'
+            }
+            
+        }
+    }
+
 }
 
 

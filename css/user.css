@@ -89,45 +89,6 @@ body {
   -webkit-filter: blur(18px);
   filter: blur(18px);
 }
-.dynamic-header {
-  display: flex;
-  display: none;
-  justify-content: space-between;
-  width: 15rem;
-  background-color: #fff;
-}
-.dynamic-header .iconfont {
-  font-size: 1.5rem;
-  padding-left: 0.53rem;
-  font-weight: 550;
-}
-.dynamic-header .dynamic-user-info {
-  padding-top: 0.27rem;
-  margin-left: -2.2rem;
-}
-.dynamic-header .dynamic-user-info img {
-  float: left;
-  width: 1.8rem;
-  height: 1.8em;
-  border-radius: 0.9rem;
-}
-.dynamic-header .dynamic-user-info .total {
-  padding-left: 0.23rem;
-  float: left;
-  display: flex;
-  vertical-align: top;
-  flex-direction: column;
-}
-.dynamic-header .dynamic-user-info .total .user-name {
-  font-weight: 550;
-  font-size: 0.7rem;
-}
-.dynamic-header .dynamic-user-info .total .bean-number {
-  color: #1b1b1b;
-  font-size: 0.53rem;
-  text-align: left;
-  line-height: 0.87rem;
-}
 .user-total-info {
   width: 15rem;
   height: 14rem;
@@ -158,7 +119,7 @@ body {
   border-radius: 0.37rem;
   border: 0.03rem solid black;
 }
-.user-total-info .boiling_water .icon-dianreshuihu {
+.user-total-info .boiling_water .reshui {
   float: left;
   display: inline-block;
   height: 100%;
@@ -166,9 +127,13 @@ body {
   border-radius: 0.3rem;
   background-color: #262626;
   text-align: center;
-  line-height: 1.2rem;
   color: red;
+}
+.user-total-info .boiling_water .reshui span {
+  display: inline-block;
+  transition: all 0.6s;
   font-size: 0.8rem;
+  line-height: 0.01rem;
 }
 .user-total-info .boiling_water .water_number {
   float: left;
@@ -251,8 +216,8 @@ nav {
   display: flex;
   background-color: #f2f2f2;
   height: 1.8rem;
-  width: 15rem;
   padding-left: 0.5rem;
+  z-index: 4;
 }
 nav span {
   margin-right: 1rem;
@@ -526,8 +491,6 @@ nav span.active {
   transform: translateX(-50%);
   width: 15rem;
   height: 38rem;
-  border-left: 1.38rem solid #5e483b;
-  border-right: 1.38rem solid #5e483b;
   background: url(../assets/uploads/36180475.jpg);
   background-repeat: no-repeat;
   background-position: top;
@@ -686,7 +649,7 @@ nav span.active {
 }
 .fixed_nav {
   position: fixed;
-  top: 0.6rem;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 15.4rem;
@@ -722,4 +685,19 @@ nav span.active {
 .fixed_nav .icon-email {
   font-size: 1rem;
   padding-right: 0.3rem;
+}
+.tips {
+  position: absolute;
+  top: 6.8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4.4rem;
+  background-color: rgba(29, 31, 33, 0.8);
+  height: 1.3rem;
+  border-radius: 0.5rem;
+  font-size: 0.15rem;
+  color: #eaebec;
+  line-height: 1.3rem;
+  opacity: 0;
+  transition: opacity, transform 1.4s;
 }
