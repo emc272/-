@@ -11,13 +11,13 @@ window.onload = function () {
                 nav.children[j].className = ''
             }
             this.className = 'active'
-            if(i == 0){
+            if (i == 0) {
                 window.scrollTo({
                     top: 0,
                     behavior: "smooth"
                 });
             }
-            if(i === 1){
+            if (i === 1) {
                 window.scrollTo({
                     top: dynamicHeight,
                     behavior: "smooth"
@@ -62,6 +62,7 @@ window.onload = function () {
 
     //上拉召唤用户名单和下滑到一定程度召唤固定导航栏和左右滑动切换动态/主页
 
+    let userArr = []
     //上下滑动相关
     let user_index = document.querySelector('.user-index')
     let user_details = document.querySelector('.user-details')
@@ -73,6 +74,20 @@ window.onload = function () {
     let thelun = document.querySelector('.thelun')
     let transform_name = document.querySelector('.transform_name')
     let fixed_nav = document.querySelector('.fixed_nav')
+    let water_number = document.querySelector('.water_number')
+
+
+    //初始化
+    function InitUserInfo() {
+        axios.get('http://127.0.0.1:3007/my/userInfo').then(function (res) {
+            var { data: userArr } = res.data
+            big_avatar.src = userArr.user_avatar
+            transform_name.innerText = userArr.user_name
+            water_number.innerText = userArr.reshui
+        })
+    }
+
+    InitUserInfo()
 
     let moveY = 0
     let tops = 0;
@@ -119,8 +134,8 @@ window.onload = function () {
                         top: dynamicHeight,
                         behavior: "smooth"
                     });
-                    clearTimeout(left_slide)   
-                },500);
+                    clearTimeout(left_slide)
+                }, 500);
             } else if (levels > 70) {
                 levels = 0
                 right_slide = setTimeout(() => {
@@ -128,8 +143,8 @@ window.onload = function () {
                         top: 0,
                         behavior: "smooth"
                     });
-                    clearTimeout(right_slide)   
-                },500);
+                    clearTimeout(right_slide)
+                }, 500);
             }
 
             //下滑/上拉
@@ -165,7 +180,7 @@ window.onload = function () {
     //补充，防止直接甩浏览器时判断失误
     window.onscroll = function (e) {
         scroll()
-        if(document.documentElement.scrollTop > 320){
+        if (document.documentElement.scrollTop >= 320) {
             nav.style.position = 'fixed'
             nav.style.top = '1.43rem'
             nav.style.left = '50%'
@@ -173,10 +188,10 @@ window.onload = function () {
             nav.style.transform = 'translateX(-50%)'
             nav.style.backgroundColor = 'white'
         }
-        if(document.documentElement.scrollTop >= dynamicHeight){
+        if (document.documentElement.scrollTop >= dynamicHeight - 1) {
             nav.children[1].className = 'active'
             nav.children[0].className = 'none'
-        }else{
+        } else {
             nav.children[0].className = 'active'
             nav.children[1].className = 'none'
         }
@@ -217,19 +232,24 @@ window.onload = function () {
 
     //点击热水出现动画
     let dianreshuihu = document.querySelector('.dianrenshuihu')
-    let water_number = document.querySelector('.water_number')
     let tips = document.querySelector('.tips')
-    let number = 0
     let flag = true
+
+    function addReshui() {
+        axios.post('http://127.0.0.1:3007/my/updateReshui').then(function (res) {
+            console.log(res.body);
+        })
+    }
 
     boiling_water.addEventListener('click', () => {
         if (flag) {
             flag = false
 
             //数字增加
-            number = water_number.innerText
-            number++
-            water_number.innerText = number
+            addReshui()
+            setTimeout(() => {
+                InitUserInfo()   
+            },400);
 
             //图标部分
             dianreshuihu.style.transform = 'translateY(-3rem) scale(5)'
